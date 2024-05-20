@@ -44,3 +44,26 @@
     transform: rotate(360deg);
   }
 }
+
+import React from 'react';
+import FullCalendar from @fullcalendar;
+import dayGridPlugin from '@fullcalendar;
+import /BookingCalendar.css';
+
+function BookingCalendar() {
+  return (
+    <div className="booking-calendar-container">
+      <FullCalendar
+        plugins={[dayGridPlugin]}
+        initialView="dayGridMonth"
+        events={[
+          // Array of events from backend
+          { title: 'Room 1', start: '2024-05-01', end: '2024-05-03' },
+          { title: 'Room 2', start: '2024-05-07', end: '2024-05-10' }
+        ]}
+      />
+    </div>
+  );
+}
+
+export default BookingCalendar;
